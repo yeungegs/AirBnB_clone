@@ -1,4 +1,5 @@
 [![Stories in Ready](https://badge.waffle.io/yeungegs/AirBnB_clone.png?label=ready&title=Ready)](https://waffle.io/yeungegs/AirBnB_clone?utm_source=badge)
+
 # AirBnB_clone
 Project completed for Holberton School.
 ![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/263/HBTN-hbnb-Final.png)
@@ -92,6 +93,8 @@ Task # | Type | Short description
 20 | ***Advanced*** | 
 21 | **Mandatory**  | 
 22 | ***Advanced*** | !
+### Status
+[![Throughput Graph](https://graphs.waffle.io/yeungegs/AirBnB_clone/throughput.svg)](https://waffle.io/yeungegs/AirBnB_clone/metrics/throughput)
 
 ## Getting Started
 `TK` Instructions for how to use and install codebase
