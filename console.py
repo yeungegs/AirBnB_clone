@@ -28,15 +28,43 @@ class HBNBCommand(cmd.Cmd):
         If the class name doesn't exist, print ** class doesn't exist **
         If the class name is missing, print ** class name missing **
         """
-    def do_show(self, arg):OB
+        if arg and arg in HBNBCommand.myClasses.keys():
+            newBase = HBNBCommand.myClasses[arg]()
+            newBase.save()
+            print(newBase.id)
+        elif not arg:
+            print("** class name missing **")
+        else:
+            print("** class doesn't exist **")
+
+        
+    def do_show(self, args):
         """
         Prints string representation of an instance
         based on the class name and id.
-If the instance doesn't exist for the id, print ** no instance found **
-If the id is missing, print ** instance id missing **
-If the class name doesn't exist, print ** class doesn't exist **
-If the class name is missing, print ** class name missing **
+        If the instance doesn't exist for the id, print ** no instance found **
+        If the id is missing, print ** instance id missing **
+        If the class name doesn't exist, print ** class doesn't exist **
+        If the class name is missing, print ** class name missing **
         """
+        print(type(args))
+        if args:
+            args = [x.strip() for x in args.split()]
+            print(args)
+        if len(args) == 2:
+            if args[0] in HBNBCommand.myClasses.keys():
+                result = "{}.{}".format(args[0], args[1])
+                if result in storage.all().keys():
+                    print(storage.all()[result])
+                else:
+                    print("** no instance found **")
+            else:
+                print("** class doesn't exist **")
+        elif len(args) == 1:
+            print("** instance id missing **")
+        else:
+            print("** class name missing **")
+
 
     def do_destroy():
         """
@@ -46,6 +74,19 @@ If the class name is missing, print ** class name missing **
         If the class name doesn't exist, print ** class doesn't exist **
         If the class name is missing, print ** class name missing **        
         """
+        if len(args) == 2:
+            if args[0] in HBNBCommand.myClasses:
+                myInstance = "{}.{}".format(args[0], args[1])
+                if myInstance in storage.all().keys():
+                    del storage.all()[result]
+                else:
+                    print("** no instance found **")
+            else:
+                print("** class doesn't exist **")
+        elif len(args) == 1 and args[0]:
+            print("** instance id missing **")
+        else:
+            print("** class name missing 
 
     def do_all(self, args):
         """
