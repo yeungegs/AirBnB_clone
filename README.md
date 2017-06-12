@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/yeungegs/AirBnB_clone.png?label=ready&title=Ready)](https://waffle.io/yeungegs/AirBnB_clone?utm_source=badge)
 # AirBnB_clone
 Project completed for Holberton School.
 ![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/263/HBTN-hbnb-Final.png)
