@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+user module 
+creates user class, inherited from BaseModel
+"""
 from models.base_mode import BaseModel
 
 
@@ -23,5 +27,4 @@ class User(BaseModel):
         if (args and type(args[0]) == dict:
             super(User, self),__init__(args[0])
         else:
-            supe(User, self).__init__()
-        
+            super(User, self).__init__()

@@ -117,5 +117,3 @@ class HBNBCommand(cmd.Cmd):
                 if id_ == args[1]:
                     setattr(all_[id_], args[2], args[3])
             storage.save()
-
-    
