@@ -12,15 +12,15 @@ class HBNBCommand(cmd.Cmd):
     """
     prompt = "(hbnb) "
     obj = models.storage.all()
-    def quit(self, arg):
+    def do_quit(self, args):
         """Quit command to exit the program"""
-        self.close()
-        bye()
         return True 
+
     def do_EOF(self, line):
-        """Exit the program
+        """Exit the program when user types 'EOF'
         """
         return True
+
     def do_create(self, arg):
         """
         Creates a new instance of BaseModel 
@@ -53,8 +53,9 @@ class HBNBCommand(cmd.Cmd):
             print(args)
         if len(args) == 2:
             if args[0] in HBNBCommand.myClasses.keys():
-                result = "{}.{}".format(args[0], args[1])
-                if result in storage.all().keys():
+                myInstance = "{}.{}".format(args[0], args[1])
+                if myInstance
+                in storage.all().keys():
                     print(storage.all()[result])
                 else:
                     print("** no instance found **")
@@ -66,7 +67,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
 
 
-    def do_destroy():
+    def do_destroy(self, *args):
         """
         Deletes an instance based on the class name and id (save the change into the JSON file).
         If the instance doesn't exist for the id, print ** no instance found **
@@ -86,7 +87,7 @@ class HBNBCommand(cmd.Cmd):
         elif len(args) == 1 and args[0]:
             print("** instance id missing **")
         else:
-            print("** class name missing 
+            print("** class name missing **")
 
     def do_all(self, args):
         """
@@ -108,4 +109,14 @@ class HBNBCommand(cmd.Cmd):
         If the value for the attribute name doesn't exist, print ** value missing **
 
         """
-        
+        args = args.split()
+        if len(args) != 4:
+            print("")
+        else:
+            all_ = storage.all()
+            for id_ in all_.keys():
+                if id_ == args[1]:
+                    setattr(all_[id_], args[2], args[3])
+            storage.save()
+
+    
