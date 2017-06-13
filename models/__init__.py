@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Essentially for linking info between files
 """
 from models.base_model import BaseModel
