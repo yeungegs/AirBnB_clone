@@ -56,4 +56,5 @@ class FileStorage:
 
         def userSerialize(obj):
             if isinstance(obj, datetime):
-                return obj
+                return obj.isoformat()
+            return obj
