@@ -123,7 +123,6 @@ class HBNBCommand(cmd.Cmd):
         """
         args = arg.split()
         instance_check = False
-        # Must have minimum of 4 args
         if len(args) == 0:
             print("** class name missing **")
         elif len(args) == 1:
