@@ -1,67 +1,67 @@
 #!/usr/bin/python3
 """
-Unit Test for Review Class
+Unit Test for Amenity Class
 """
 import unittest
 from datetime import datetime
 import models
 import json
 
-Review = models.review.Review
+Amenity = models.amenity.Amenity
 BaseModel = models.base_model.BaseModel
 
 
-class TestReviewDocs(unittest.TestCase):
+class TestAmenityDocs(unittest.TestCase):
     """Class for testing BaseModel docs"""
 
     @classmethod
     def setUpClass(cls):
         print('\n\n.................................')
         print('..... Testing Documentation .....')
-        print('.......   Review  Class   .......')
+        print('........   Amenity  Class   ........')
         print('.................................\n\n')
 
     def test_doc_file(self):
         """... documentation for the file"""
-        expected = '\nReview Class from Models Module\n'
-        actual = models.review.__doc__
+        expected = '\nAmenity Class from Models Module\n'
+        actual = models.amenity.__doc__
         self.assertEqual(expected, actual)
 
     def test_doc_class(self):
         """... documentation for the class"""
-        expected = 'Review class handles all application reviews'
-        actual = Review.__doc__
+        expected = 'Amenity class handles all application amenities'
+        actual = Amenity.__doc__
         self.assertEqual(expected, actual)
 
     def test_doc_init(self):
         """... documentation for init function"""
-        expected = 'instantiates a new review'
-        actual = Review.__init__.__doc__
+        expected = 'instantiates a new amenity'
+        actual = Amenity.__init__.__doc__
         self.assertEqual(expected, actual)
 
 
-class TestReviewInstances(unittest.TestCase):
+class TestAmenityInstances(unittest.TestCase):
     """testing for class instances"""
 
     @classmethod
     def setUpClass(cls):
         print('\n\n.................................')
         print('....... Testing Functions .......')
-        print('........  Review  Class  ........')
+        print('.........  Amenity  Class  .........')
         print('.................................\n\n')
 
     def setUp(self):
-        """initializes new review for testing"""
-        self.review = Review()
+        """initializes new amenity for testing"""
+        self.amenity = Amenity()
 
     def test_instantiation(self):
-        """... checks if Review is properly instantiated"""
-        self.assertIsInstance(self.review, Review)
+        """... checks if Amenity is properly instantiated"""
+        self.assertIsInstance(self.amenity, Amenity)
 
     def test_to_string(self):
         """... checks if BaseModel is properly casted to string"""
-        my_str = str(self.review)
-        my_list = ['Review', 'id', 'created_at']
+        my_str = str(self.amenity)
+        my_list = ['Amenity', 'id', 'created_at']
         actual = 0
         for sub_str in my_list:
             if sub_str in my_str:
@@ -70,7 +70,7 @@ class TestReviewInstances(unittest.TestCase):
 
     def test_instantiation_no_updated(self):
         """... should not have updated attribute"""
-        my_str = str(self.review)
+        my_str = str(self.amenity)
         actual = 0
         if 'updated_at' in my_str:
             actual += 1
@@ -78,38 +78,38 @@ class TestReviewInstances(unittest.TestCase):
 
     def test_updated_at(self):
         """... save function should add updated_at attribute"""
-        self.review.save()
-        actual = type(self.review.updated_at)
+        self.amenity.save()
+        actual = type(self.amenity.updated_at)
         expected = type(datetime.now())
         self.assertEqual(expected, actual)
 
     def test_to_json(self):
         """... to_json should return serializable dict object"""
-        self.review_json = self.review.to_json()
+        self.amenity_json = self.amenity.to_json()
         actual = 1
         try:
-            serialized = json.dumps(self.review_json)
+            serialized = json.dumps(self.amenity_json)
         except:
             actual = 0
         self.assertTrue(1 == actual)
 
     def test_json_class(self):
-        """... to_json should include class key with value Review"""
-        self.review_json = self.review.to_json()
+        """... to_json should include class key with value Amenity"""
+        self.amenity_json = self.amenity.to_json()
         actual = None
-        if self.review_json['__class__']:
-            actual = self.review_json['__class__']
-        expected = 'Review'
+        if self.amenity_json['__class__']:
+            actual = self.amenity_json['__class__']
+        expected = 'Amenity'
         self.assertEqual(expected, actual)
 
     def test_email_attribute(self):
         """... add email attribute"""
-        self.review.text = "This place smells"
-        if hasattr(self.review, 'text'):
-            actual = self.review.text
+        self.amenity.name = "greatWifi"
+        if hasattr(self.amenity, 'name'):
+            actual = self.amenity.name
         else:
-            acual = ''
-        expected = "This place smells"
+            actual = ''
+        expected = "greatWifi"
         self.assertEqual(expected, actual)
 
 if __name__ == '__main__':
