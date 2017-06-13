@@ -54,8 +54,7 @@ class HBNBCommand(cmd.Cmd):
         if len(args) == 2:
             if args[0] in HBNBCommand.myClasses.keys():
                 myInstance = "{}.{}".format(args[0], args[1])
-                if myInstance
-                in storage.all().keys():
+                if myInstance in storage.all().keys():
                     print(storage.all()[result])
                 else:
                     print("** no instance found **")
