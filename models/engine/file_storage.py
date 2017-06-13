@@ -32,44 +32,33 @@ class FileStorage:
     def all(self):
         """Returns objects
         """
-        # print("\nFILE all IS USED\n")
         return (FileStorage.__objects)
 
     def new(self, obj):
         """Sets in __obj the obj with
         key <obj class name>.id
         """
-        # print("\nFILE new HAS STARTED\n")
         new_obj_id = "{}.{}".format(type(obj).__name__,
                                     obj.id)
-        # print("This is the new_obj {}".format(new_obj_id))
         FileStorage.__objects[new_obj_id] = obj
-        # print("This is __objects dictionary {}".format(self.__objects))
-        # print("\nFILE new IS COMPLETED\n")
 
     def save(self):
         """serializes __objects to the JSON file
         """
-        # print("\nFILE save HAS STARTED\n")
         new_dict = {}
         for key in FileStorage.__objects.keys():
             new_dict[key] = FileStorage.__objects[key].to_json()
-            # print("This is new_dict --> {}".format(new_dict))
         with open(FileStorage.__file_path, mode="w",
                   encoding="UTF-8") as to_file:
-            # serialize here
             (json.dump(new_dict, to_file))
-        # print("\nFILE save IS COMPLETED\n")
 
     def reload(self):
         """deserializes the JSON file to __objects
         (only if the JSON file exists ; otherwise, do nothing)
         """
         try:
-            # print("\nATTEMPTING TRY reload\n")
             with open(FileStorage.__file_path, mode="r",
                       encoding="UTF-8") as to_file:
-                # print("\nRELOAD File opened\n")
                 objects_loaded = json.load(to_file)
                 from models.base_model import BaseModel
                 from models.amenity import Amenity
@@ -87,22 +76,5 @@ class FileStorage:
                         meth = value.get("__class__")
                         self.__objects[key] = eval(
                             str(meth))(objects_loaded[key])
-
-                """
-                for key in json_obj.keys():
-                    self.__objects[key] = BaseModel(**json_obj[key])
-
-                for obj_id, dic in object_loaded.items():
-                    # print("\nreload LOOP ENTERED\n")
-                    obj_class = objects_loaded[obj_id].get("__class__")
-                    if obj_class in classes:
-                        meth = objects_loaded.get(obj_class)
-                        FileStorage.__objects[obj_id] = meth(
-                            **objects_loaded[obj])
-                """
-            # print("\nSUCCESSFUL TRY\n")
         except:
-            # print("\nreload EXCEPT USED\n")
             pass
-
-        # print("\nreload IS COMPLETED\n")

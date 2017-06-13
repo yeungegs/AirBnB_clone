@@ -98,9 +98,6 @@ class HBNBCommand(cmd.Cmd):
         """Prints all string representation of all
         instances based or not on the class name
         """
-        # below returns list of instances of each class
-        # an empty list is printed if there are no instances found
-        # args = arg.split()
         instances = storage.all()
         just_class = "empty list"
         if arg:
@@ -141,13 +138,10 @@ class HBNBCommand(cmd.Cmd):
             instances = storage.all()
             for key, value in instances.items():
                 print("This is the key {}".format(key))
-                # check if quotes are around attribute value
                 if args[3][0] == "" and args[3][-1] == "":
-                    # strip quotes
                     args[3] = args[3][1:-1]
                 instance_id = "{0}.{1}".format(args[0], args[1])
                 if key == instance_id:
-                    print("YAY BITCH")
                     setattr(value, args[2], args[3])
                     storage.save()
                     instance_check = True
