@@ -64,8 +64,13 @@ class HBNBCommand(cmd.Cmd):
         storage.save()
 
     def do_show(self, arg):
-        """Prints the string representation of
-        an instance based on the class name and id
+        """
+        Prints string representation of an instance
+        based on the class name and id.
+        If the instance doesn't exist for the id, print ** no instance found **
+        If the id is missing, print ** instance id missing **
+        If the class name doesn't exist, print ** class doesn't exist **
+        If the class name is missing, print ** class name missing **
         """
         args = arg.split()
         if len(args) == 0:
@@ -83,8 +88,12 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
 
     def do_destroy(self, arg):
-        """Deletes an instance based on the class name
-        and id (save the change into the JSON file)
+        """
+        Deletes an instance based on the class name and id (save the change into the JSON file).
+        If the instance doesn't exist for the id, print ** no instance found **
+        If the id is missing, print ** instance id missing **
+        If the class name doesn't exist, print ** class doesn't exist **
+        If the class name is missing, print ** class name missing **
         """
         args = arg.split()
         if len(args) == 0:
@@ -103,8 +112,9 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
 
     def do_all(self, arg=""):
-        """Prints all string representation of all
-        instances based or not on the class name
+        """
+        Prints all string representation of all instances based or not on the class name.
+        If the class name doesn't exist, print ** class doesn't exist **
         """
         instances = storage.all()
         just_class = "empty list"
@@ -125,9 +135,16 @@ class HBNBCommand(cmd.Cmd):
                 print(value)
 
     def do_update(self, arg):
-        """Updates an instance based on the class name
-        and id by adding or updating attribute
-        (save the change into the JSON file).
+        """
+        Updates an instance based on the class name and id
+        by adding or updating attribute (save the change into the JSON file)
+        
+        If the instance doesn't exist for the id, print ** no instance found **
+        If the id is missing, print ** instance id missing **
+        If the class name doesn't exist, print ** class doesn't exist **
+        If the class name is missing, print ** class name missing **
+        If the attribute name is missing, print ** attribute name missing **
+        If the value for the attribute name doesn't exist, print ** value missing **
         """
         args = arg.split()
         instance_check = False
