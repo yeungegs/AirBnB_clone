@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""defines all common attributes/methods for other classes
+"""
+This is the BaseModel module
+It contains one class: BaseModel
+It contains the following functions:
+    def to_json(self)
 """
 import json
 import uuid
@@ -13,6 +17,11 @@ class BaseModel:
     """
     def __init__(self, *args, **kwargs):
         """init BaseModel class
+        public instance attributes
+        id: string - assign with an uuid when an instance is created
+        created_at: datetime - assign with the current
+        datetime when an instance is created
+        updated_at:datetime
         """
         if kwargs:
             self.__dict__ = kwargs
@@ -50,6 +59,8 @@ class BaseModel:
 
     def __str__(self):
         """Print BaseModel info
+        private method
+        __str__: should print: [<class name>] (<self.id>) <self.__dict__>
         """
         return ("[{0}] ({1}) {2}".format(self.__class__.__name__,
                                          self.id, self.__dict__))
