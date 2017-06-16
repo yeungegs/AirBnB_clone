@@ -24,7 +24,13 @@ Project for [Holberton School](https://github.com/holbertonschool/). First step:
 
 This is the first step towards building a full web application: an AirBnB clone. This first step is very important because everything built during this project will be used in all following projects: HTML/CSS templating, database storage, API, front-end integration...
 
-Each tasks are linked and will help you to: - put in place a parent class (called BaseModel) to take care of the initialization, serialization and deserialization of your future instances - create a simple flow of serialization/deserialization: Instance <-> Dictionary <-> JSON string <-> file - create all classes used for AirBnB (User, State, City, Place...) that inherit from BaseModel - create the first abstracted storage engine of the project: File storage. - create all unittests to validate all our classes and storage engine
+Each tasks are linked and will help you to: 
+- put in place a parent class (called BaseModel) to take care of the initialization, serialization and deserialization of your future instances 
+- create a simple flow of serialization/deserialization: 
+```Instance <-> Dictionary <-> JSON string <-> file ```
+- create all classes used for AirBnB (User, State, City, Place...) that inherit from BaseModel 
+- create the first abstracted storage engine of the project: File storage. 
+- create all unittests to validate all our classes and storage engine
 
 #### Environment 
 Ubuntu 14.04 LTS
