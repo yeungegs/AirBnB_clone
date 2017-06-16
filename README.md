@@ -1,5 +1,3 @@
-[![Stories in Ready](https://badge.waffle.io/yeungegs/AirBnB_clone.png?label=ready&title=Ready)](https://waffle.io/yeungegs/AirBnB_clone?utm_source=badge)
-
 # AirBnB_clone
 Project completed for Holberton School.
 ![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/263/HBTN-hbnb-Final.png)
@@ -21,7 +19,21 @@ Project completed for Holberton School.
 ## Project Details
 
 ### Description
-Project for [Holberton School](https://github.com/holbertonschool/). 
+![image](https://www.holbertonschool.com/assets/holberton-logo-1cc451260ca3cd297def53f2250a9794810667c7ca7b5fa5879a569a457bf16f.png)
+Project for [Holberton School](https://github.com/holbertonschool/). First step: Write a command interpreter to manage your AirBnB objects.
+
+This is the first step towards building a full web application: an AirBnB clone. This first step is very important because everything built during this project will be used in all following projects: HTML/CSS templating, database storage, API, front-end integration...
+
+Each tasks are linked and will help you to: - put in place a parent class (called BaseModel) to take care of the initialization, serialization and deserialization of your future instances - create a simple flow of serialization/deserialization: Instance <-> Dictionary <-> JSON string <-> file - create all classes used for AirBnB (User, State, City, Place...) that inherit from BaseModel - create the first abstracted storage engine of the project: File storage. - create all unittests to validate all our classes and storage engine
+
+#### Environment 
+Ubuntu 14.04 LTS
+
+#### Python version
+Python 3.4.3
+
+#### Style
+PEP 8 (v.1.7)
 
 ### Project Requirements
 #### Requirements for Python scripts
@@ -55,42 +67,41 @@ For this project, you will create unit tests, not doctest:
 - We strongly encourage you to work together on test cases, so that you don't miss any edge case
 
 ### What students should learn from this project
-At the end of this project students are expected to be able to explain to anyone, without the help of Google:
-How to create a Python package
-How to create a command interpreter in Python using the cmd module
-What is Unit testing and how to implement it in a large project
-How to serialize and deserialize a Class
-How to write and read a JSON file
-How to manage datetime
-What is an UUID
-What is *args and how to use it
-What is **kwargs and how to use it
-How to handle named arguments in a function
+- At the end of this project students are expected to be able to explain to anyone, without the help of Google:
+- How to create a Python package
+- How to create a command interpreter in Python using the cmd module
+- What is Unit testing and how to implement it in a large project
+- How to serialize and deserialize a Class
+- How to write and read a JSON file
+- How to manage datetime
+- What is an UUID
+- What is *args and how to use it
+- What is **kwargs and how to use it
+- How to handle named arguments in a function
 
 ## Project Breakdown
-Task # | Type | Short description
- ---: | --- | --- | 
-0 | **Mandatory** | 
-1 | **Mandatory** | 
-2 | **Mandatory** | 
-3 | ***Advanced***| 
-4 | **Mandatory** | 
-5 | ***Advanced***| 
-6 | **Mandatory** | 
-7 | **Mandatory** | 
-8 | ***Advanced***| 
-9 | ***Advanced***| 
-10 | **Mandatory**  | 
 
 ### Status
+[![Stories in Ready](https://badge.waffle.io/yeungegs/AirBnB_clone.png?label=ready&title=Ready)](https://waffle.io/yeungegs/AirBnB_clone?utm_source=badge)
 
 [![Throughput Graph](https://graphs.waffle.io/yeungegs/AirBnB_clone/throughput.svg)](https://waffle.io/yeungegs/AirBnB_clone/metrics/throughput)
 
 ## Getting Started
-`TK` Instructions for how to use and install codebase
 
 ### Installation
-`TK` Instructions for how to use and install codebase
+To use this project:
+
+1. Clone
+```
+https://github.com/yeungegs/AirBnB_clone.git
+```
+
+2. On your machine, navigate (`cd`) to the newly created directory
+```
+cd AirBnb_clone
+```
+
+3. Start the console in one of the modes outlined below!
 
 ### Screenshots
 This console works in interactive mode:
