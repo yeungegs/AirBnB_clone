@@ -25,15 +25,6 @@ Project completed for Holberton School.
 ### Description
 Project for [Holberton School](https://github.com/holbertonschool/). 
 
-#### File descriptions
-
-File Functions contained | Description and Return value 
------- | :---
- | 
- |
- |
- |
-
 ### Project Requirements
 #### Requirements for Python scripts
 - Allowed editors: `vi`, `vim`, `emacs`
@@ -81,19 +72,9 @@ Task # | Type | Short description
 8 | ***Advanced***| 
 9 | ***Advanced***| 
 10 | **Mandatory**  | 
-11 | ***Advanced*** | 
-12 | ***Advanced*** | 
-13 | ***Advanced*** | 
-14 | ***Advanced*** | 
-15 | ***Advanced*** | 
-16 | ***Advanced*** | 
-17 | ***Advanced*** | 
-18 | ***Advanced*** | 
-19 | ***Advanced*** | 
-20 | ***Advanced*** | 
-21 | **Mandatory**  | 
-22 | ***Advanced*** | !
+
 ### Status
+
 [![Throughput Graph](https://graphs.waffle.io/yeungegs/AirBnB_clone/throughput.svg)](https://waffle.io/yeungegs/AirBnB_clone/metrics/throughput)
 
 ## Getting Started
