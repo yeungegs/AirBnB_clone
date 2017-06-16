@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Custom command line for AirBnB project
+"""
+Custom command line for AirBnB project
+This module contains the entry point of the command interpreter
 """
 import cmd
 from models import storage
@@ -11,9 +13,11 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
-
 class HBNBCommand(cmd.Cmd):
-    """ Command Line Interpreter Class """
+    """
+    Command Line Interpreter Class
+    This module contains one class: `HBNBCommand()`
+    """
 
     prompt = "(hbnb) "
 
@@ -27,13 +31,13 @@ class HBNBCommand(cmd.Cmd):
         "Review": Review}
 
     def do_EOF(self, line):
-        """Exit
+        """Exit the program when user types 'EOF'
         """
         print()
         return True
 
     def do_quit(self, line):
-        """Quit command to exit the program
+        """Quit command to exit the program"""
         """
         return True
 
@@ -42,8 +46,11 @@ class HBNBCommand(cmd.Cmd):
         return False
 
     def do_create(self, arg):
-        """Creates a new instance of BaseModel,
-        saves it (to the JSON file) and prints the id
+        """
+        Creates a new instance of BaseModel 
+        saves it (to the JSON file) and prints id.
+        If the class name doesn't exist, print ** class doesn't exist **
+        If the class name is missing, print ** class name missing **
         """
         args = arg.split()
         if len(args) == 0 or arg is None:
