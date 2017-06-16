@@ -90,7 +90,8 @@ class HBNBCommand(cmd.Cmd):
 
     def do_destroy(self, arg):
         """
-        Deletes an instance based on the class name and id save the change into the JSON file.
+        Deletes an instance based on the class name and id
+        save the change into the JSON file.
         If the instance doesn't exist for the id, print ** no instance found **
         If the id is missing, print ** instance id missing **
         If the class name doesn't exist, print ** class doesn't exist **
@@ -114,7 +115,8 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, arg=""):
         """
-        Prints all string representation of all instances based or not on the class name.
+        Prints all string representation of all instances
+        based or not on the class name.
         If the class name doesn't exist, print ** class doesn't exist **
         """
         instances = storage.all()
@@ -144,7 +146,8 @@ class HBNBCommand(cmd.Cmd):
         If the class name doesn't exist, print ** class doesn't exist **
         If the class name is missing, print ** class name missing **
         If the attribute name is missing, print ** attribute name missing **
-        If the value for the attribute name doesn't exist, print '** value missing **
+        If the value for the attribute name doesn't exist,
+           print ** value missing **
         """
         args = arg.split()
         instance_check = False
