@@ -13,6 +13,7 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
+
 class HBNBCommand(cmd.Cmd):
     """
     Command Line Interpreter Class
@@ -31,24 +32,24 @@ class HBNBCommand(cmd.Cmd):
         "Review": Review}
 
     def do_EOF(self, line):
-        """Exit the program when user types 'EOF'
+        """Exit the program when user types EOF
         """
         print()
         return True
 
     def do_quit(self, line):
-        """Quit command to exit the program"""
+        """Quit command to exit the program
         """
         return True
 
     def emptyline(self):
-        """ Nothing """
+        """  """
         return False
 
     def do_create(self, arg):
         """
-        Creates a new instance of BaseModel 
-        saves it (to the JSON file) and prints id.
+        Creates a new instance of BaseModel
+        saves it to the JSON file and prints id.
         If the class name doesn't exist, print ** class doesn't exist **
         If the class name is missing, print ** class name missing **
         """
@@ -89,7 +90,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_destroy(self, arg):
         """
-        Deletes an instance based on the class name and id (save the change into the JSON file).
+        Deletes an instance based on the class name and id save the change into the JSON file.
         If the instance doesn't exist for the id, print ** no instance found **
         If the id is missing, print ** instance id missing **
         If the class name doesn't exist, print ** class doesn't exist **
@@ -137,14 +138,13 @@ class HBNBCommand(cmd.Cmd):
     def do_update(self, arg):
         """
         Updates an instance based on the class name and id
-        by adding or updating attribute (save the change into the JSON file)
-        
+        by adding or updating attribute then save the change into the JSON file
         If the instance doesn't exist for the id, print ** no instance found **
         If the id is missing, print ** instance id missing **
         If the class name doesn't exist, print ** class doesn't exist **
         If the class name is missing, print ** class name missing **
         If the attribute name is missing, print ** attribute name missing **
-        If the value for the attribute name doesn't exist, print ** value missing **
+        If the value for the attribute name doesn't exist, print '** value missing **
         """
         args = arg.split()
         instance_check = False
