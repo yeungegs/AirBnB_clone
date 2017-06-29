@@ -9,7 +9,7 @@ Project completed for Holberton School.
 	* [Resources](#resources)
 * [**Project Requirements**](#project-requirements)
  	* [Project Objectives](#what-students-should-learn-from-this-project)
- 	* [Requirements for HTML/CSS files](#requirements-for-html/css-files)
+ 	* [Requirements for HTML/CSS files](#requirements-for-htmlcss-files)
 * [**Project Breakdown**](#project-breakdown)
     * [Status](#status)
 
@@ -18,16 +18,14 @@ Project completed for Holberton School.
 	* [Screenshots](#screenshots)
 * [**Contributing**](#contributing)
 * [**Team**](#team)
-* [**Resources**](#resources)
+* [**Credit**](#credit)
 
 ---
 ## Project Details
 
 ### Description
-
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Welcome to CSS <a href="https://twitter.com/holbertonschool">@holbertonschool</a> <a href="https://t.co/qu5iypZqTm">pic.twitter.com/qu5iypZqTm</a></p>&mdash; Holberton School (@holbertonschool) <a href="https://twitter.com/holbertonschool/status/831650456464093185">February 14, 2017</a></blockquote>
   
-![image](https://www.holbertonschool.com/assets/holberton-logo-1cc451260ca3cd297def53f2250a9794810667c7ca7b5fa5879a569a457bf16f.png)
+[![](https://www.holbertonschool.com/assets/holberton-logo-1cc451260ca3cd297def53f2250a9794810667c7ca7b5fa5879a569a457bf16f.png)](https://www.holbertonschool.com)
 
 Project for [Holberton School](https://github.com/holbertonschool/). 
 
@@ -65,19 +63,6 @@ For references:
 
 ### What students should learn from this project
 At the end of this project students are expected to be able to explain to anyone, without the help of Google:
-- How to create a Python package
-- How to create a command interpreter in Python using the cmd module
-- What is Unit testing and how to implement it in a large project
-- How to serialize and deserialize a Class
-- How to write and read a JSON file
-- How to manage datetime
-- What is an UUID
-- What is *args and how to use it
-- What is **kwargs and how to use it
-- How to handle named arguments in a function
-
-At the end of this project you are expected to be able to explain to anyone, without the help of Google:
-
 - What is HTML
 - How to create an HTML page
 - What is a markup language
@@ -111,68 +96,22 @@ At the end of this project you are expected to be able to explain to anyone, wit
 ## Project Breakdown
 
 ### Status
-[![Stories in Ready](https://badge.waffle.io/yeungegs/AirBnB_clone.png?label=ready&title=Ready)](https://waffle.io/yeungegs/AirBnB_clone?utm_source=badge)
-
-[![Throughput Graph](https://graphs.waffle.io/yeungegs/AirBnB_clone/throughput.svg)](https://waffle.io/yeungegs/AirBnB_clone/metrics/throughput)
 
 ## Getting Started
 
 ### Installation
-To use this project:
-
-1. Clone
-```
-https://github.com/yeungegs/AirBnB_clone.git
-```
-
-2. On your machine, navigate (`cd`) to the newly created directory
-```
-cd AirBnb_clone
-```
-
-3. Start the console in one of the modes outlined below!
 
 ### Screenshots
-This console works in interactive mode:
-```shell
-$ ./console.py
-(hbnb) help
 
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-
-(hbnb)
-(hbnb)
-(hbnb) quit
-$
-```
-
-
-This console also works in non-interactive mode:
-```shell
-$ ./console.py
-(hbnb) help
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-
-(hbnb)
-(hbnb)
-(hbnb) quit
-$
-```
 
 ## Contributing
 This project is a closed and contributions are not accepted at this time. 
 
 ## Team
 
-[![Hunter Casbeer](https://avatars1.githubusercontent.com/u/6034810?v=3&s=230)](https://github.com/spacexengineer) | [![Elaine Yeung](https://avatars3.githubusercontent.com/u/23224088?v=3&s=230)](https://github.com/yeungegs)
-:---:|:---:
-[Hunter Casbeer](https://github.com/spacexengineer) <a target="_blank" href="https://twitter.com/spacex3ngineer"> <img src="https://cloud.githubusercontent.com/assets/23224088/24941419/2f3fc5ce-1eff-11e7-9ed3-85693579df09.png" height="20"></a> | [Elaine Yeung](https://github.com/yeungegs) <a target="_blank" href="https://twitter.com/egsy"> <img src="https://cloud.githubusercontent.com/assets/23224088/24941419/2f3fc5ce-1eff-11e7-9ed3-85693579df09.png" height="20"></a>
+[![Elaine Yeung](https://avatars3.githubusercontent.com/u/23224088?v=3&s=230)](https://github.com/yeungegs)
+:---:|
+[Elaine Yeung](https://github.com/yeungegs) <a target="_blank" href="https://twitter.com/egsy"> <img src="https://cloud.githubusercontent.com/assets/23224088/24941419/2f3fc5ce-1eff-11e7-9ed3-85693579df09.png" height="20"></a>
 
-## Resources
+## Credit
 * Readme template from GitHub https://guides.github.com/features/wikis/
-* Docker generate-authors script https://github.com/docker/docker/blob/master/hack/generate-authors.sh
