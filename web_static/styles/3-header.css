@@ -6,6 +6,8 @@ header {
 
 .image {
     display: flex;
+    width: 142px;
+    height: 60px;
     background: #FFFFFF url("../images/logo.png") no-repeat center center;
     padding: 6px 0px 0px 20px;
     align-items: center;}
